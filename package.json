@@ -1,0 +1,37 @@
+{
+  "name": "multiplex",
+  "productName": "Multiplex",
+  "version": "1.0.0",
+  "description": "Mur d'images des chaînes d'info francophones",
+  "main": "./out/main/index.js",
+  "author": "Nicolas Morellet",
+  "private": true,
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "check-streams": "node scripts/check-streams.mjs",
+    "build:win": "electron-vite build && electron-builder --win"
+  },
+  "devDependencies": {
+    "@dnd-kit/core": "^6.3.1",
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^5.2.0",
+    "electron": "^44.5.1",
+    "electron-builder": "^26.15.3",
+    "electron-vite": "^5.0.0",
+    "framer-motion": "^14.0.0",
+    "hls.js": "^1.7.3",
+    "lucide-react": "^1.52.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "typescript": "^7.0.2",
+    "vite": "^7.3.6",
+    "vitest": "^3.2.7",
+    "zustand": "^5.0.15"
+  }
+}
