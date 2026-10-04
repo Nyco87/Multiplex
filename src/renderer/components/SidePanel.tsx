@@ -3,10 +3,11 @@ import { X } from 'lucide-react'
 import { useAppStore } from '../store/useAppStore'
 import { ChannelPicker } from './ChannelPicker'
 import { HelpPanel } from './HelpPanel'
+import { InfoPanel } from './InfoPanel'
 import { LayoutPicker } from './LayoutPicker'
 
-const TITLES = { layout: 'Disposition', channels: 'Chaînes', help: 'Raccourcis clavier' } as const
-const CONTENT = { layout: LayoutPicker, channels: ChannelPicker, help: HelpPanel }
+const TITLES = { layout: 'Disposition', channels: 'Chaînes', help: 'Raccourcis clavier', info: 'Information' } as const
+const CONTENT = { layout: LayoutPicker, channels: ChannelPicker, help: HelpPanel, info: InfoPanel }
 
 export function SidePanel() {
   const { panel, closePanel } = useAppStore()

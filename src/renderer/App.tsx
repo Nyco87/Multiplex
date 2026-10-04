@@ -14,7 +14,7 @@ const subscribeSystemTheme = (cb: () => void) => {
   return () => darkQuery.removeEventListener('change', cb)
 }
 
-const SHORTCUT_PANELS: Record<string, Exclude<Panel, null>> = { h: 'help', d: 'layout', c: 'channels' }
+const SHORTCUT_PANELS: Record<string, Exclude<Panel, null>> = { h: 'help', d: 'layout', c: 'channels', i: 'info' }
 
 function useResolvedTheme(): 'light' | 'dark' {
   const pref = useAppStore((s) => s.theme)

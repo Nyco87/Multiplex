@@ -1,5 +1,5 @@
 import { join, normalize } from 'node:path'
-import { app, BrowserWindow, ipcMain, Menu, nativeTheme, net, protocol, session } from 'electron'
+import { app, BrowserWindow, ipcMain, Menu, nativeTheme, net, protocol, session, shell } from 'electron'
 import { pathToFileURL } from 'node:url'
 
 // En production, l'appli est servie par un protocole dédié : une origine fixe garde
@@ -120,8 +120,11 @@ function createWindow(): void {
   // Plein écran : l'interface masque sa barre de titre et la barre de gauche.
   win.on('enter-full-screen', () => win.webContents.send('fullscreen', true))
   win.on('leave-full-screen', () => win.webContents.send('fullscreen', false))
-  // Liens externes éventuels : jamais de nouvelle fenêtre dans l'appli.
-  win.webContents.setWindowOpenHandler(() => ({ action: 'deny' }))
+  // Liens externes (panneau Information) : ouverts dans le navigateur, jamais dans l'appli.
+  win.webContents.setWindowOpenHandler(({ url }) => {
+    if (/^https:\/\//.test(url)) shell.openExternal(url)
+    return { action: 'deny' }
+  })
   win.loadURL(DEV_URL ?? `${APP_ORIGIN}/index.html`)
 }
 

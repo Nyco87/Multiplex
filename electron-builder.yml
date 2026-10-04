@@ -14,3 +14,10 @@ nsis:
   oneClick: false
   allowToChangeInstallationDirectory: true
   shortcutName: Multiplex
+# Publication sur GitHub Releases (workflow .github/workflows/release.yml) : la release est
+# créée en brouillon, à relire puis publier à la main.
+publish:
+  provider: github
+  owner: Nyco87
+  repo: Multiplex
+  releaseType: draft

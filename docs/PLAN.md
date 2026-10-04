@@ -151,6 +151,16 @@ Ces écarts sont apparus pendant le développement de la première version.
 - **Splashscreen d'environ 1,7 s** au lancement, façon chaîne d'info : balayage d'un bandeau rouge, grille du logo, titre « MULTIPLEX », bandeau « EN DIRECT ». Il s'efface ensuite vers le haut.
 - **Intégré à l'interface**, et non dans une fenêtre séparée : les flux démarrent dessous pendant l'animation. Vérifié : à la fin de l'animation, les 4 flux par défaut sont déjà prêts à être lus.
 
+### Itération 13 : panneau Information, README, publication
+
+- **Panneau Information** : il s'ouvre par un bouton en bas de la barre latérale, par la barre flottante en plein écran, ou par la touche `I`. Il présente l'application (icône, version, description), la liste des chaînes avec un lien vers leur site, les mentions légales sur les droits des flux, et les licences des bibliothèques embarquées.
+- **Licences tierces** : les bibliothèques embarquées sont toutes sous licence permissive (MIT, ISC, Apache-2.0, 0BSD). Elles exigent seulement de reproduire leur mention de copyright et leur licence. Un plugin Vite (`scripts/licenses.ts`) les collecte à chaque build, ce qui évite une liste à maintenir à la main.
+- **Liens externes** : le processus principal ouvre les liens `https://` dans le navigateur par défaut, au lieu de les bloquer.
+- **README** ajouté.
+- **Publication automatisée** : le workflow GitHub Actions `release.yml` se déclenche sur un tag `v*`. Il vérifie que le tag correspond à la version de `package.json`, lance les tests, construit l'installeur et le dépose dans une **release brouillon**. Lancé à la main, il construit seulement l'installeur, en artefact.
+- **Multiplateforme écarté pour l'instant** : l'application reste Windows uniquement. Les adaptations relevées pour macOS (barre de titre, menu, raccourci plein écran, signature) et Linux restent à faire si le besoin revient.
+- **Licence de Multiplex** : aucune pour l'instant (tous droits réservés). Le choix entre MIT et Apache-2.0 reste ouvert.
+
 ## 6. Vérification réalisée
 
 - **Tests unitaires** : 22 tests Vitest sur la géométrie des 6 dispositions et du mode grand (1 à 6 flux), et sur les règles de sélection.

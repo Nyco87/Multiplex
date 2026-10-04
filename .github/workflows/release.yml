@@ -1,0 +1,55 @@
+# Build Windows et publication d'une release brouillon.
+# - push d'un tag v* (ex. v1.0.0) : build, puis installeur déposé dans une release brouillon.
+# - lancement manuel (onglet Actions) : build seul, installeur récupérable en artefact.
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Vérifier que le tag correspond à la version
+        if: github.ref_type == 'tag'
+        shell: bash
+        run: |
+          version=$(node -p "require('./package.json').version")
+          if [ "${GITHUB_REF_NAME}" != "v${version}" ]; then
+            echo "::error::Le tag ${GITHUB_REF_NAME} ne correspond pas à la version v${version} de package.json"
+            exit 1
+          fi
+
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+
+      - name: Installeur et release brouillon
+        if: github.ref_type == 'tag'
+        run: npx electron-builder --win --publish always
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Installeur seul
+        if: github.ref_type != 'tag'
+        run: npx electron-builder --win --publish never
+
+      - name: Artefact
+        if: github.ref_type != 'tag'
+        uses: actions/upload-artifact@v4
+        with:
+          name: Multiplex-setup
+          path: dist/*.exe

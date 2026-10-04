@@ -1,4 +1,4 @@
-import { LayoutGrid, Maximize2, Minimize2, Moon, Sun, Tv } from 'lucide-react'
+import { Info, LayoutGrid,Maximize2, Minimize2, Moon, Sun, Tv } from 'lucide-react'
 import { useAppStore } from '../store/useAppStore'
 
 interface Props {
@@ -63,6 +63,15 @@ export function FloatingActions({ theme }: Props) {
           aria-pressed={panel === 'layout'}
         >
           <LayoutGrid size={16} />
+        </button>
+        <button
+          className={`titlebar-btn ${panel === 'info' ? 'is-active' : ''}`}
+          onClick={() => togglePanel('info')}
+          title="Information (I)"
+          aria-label="Information"
+          aria-pressed={panel === 'info'}
+        >
+          <Info size={16} />
         </button>
       </div>
       <span className="floating-separator" />

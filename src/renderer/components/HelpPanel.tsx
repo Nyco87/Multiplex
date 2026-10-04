@@ -2,6 +2,7 @@ const SHORTCUTS: { keys: string[]; label: string }[] = [
   { keys: ['H'], label: 'Afficher / masquer l’aide' },
   { keys: ['C'], label: 'Choisir les chaînes' },
   { keys: ['D'], label: 'Choisir la disposition' },
+  { keys: ['I'], label: 'Information' },
   { keys: ['1', '…', '6'], label: 'Flux n° en grand, avec le son' },
   { keys: ['F11'], label: 'Plein écran' },
   { keys: ['Échap'], label: 'Fermer : panneau, grand flux, plein écran' }

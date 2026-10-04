@@ -5,7 +5,7 @@ import { capacityOf, LAYOUTS_BY_ID, type LayoutId } from '../layout/layouts'
 import { fitToCapacity, swap, toggleChannel } from './selection'
 
 export type ThemePref = 'light' | 'dark' | 'system'
-export type Panel = 'layout' | 'channels' | 'help' | null
+export type Panel = 'layout' | 'channels' | 'help' | 'info' | null
 
 interface AppState {
   layout: LayoutId
