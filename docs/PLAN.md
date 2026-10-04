@@ -169,6 +169,11 @@ Ces écarts sont apparus pendant le développement de la première version.
 - **Mentions légales placées avant les chaînes.**
 - **Section des chaînes repliée par défaut** et renommée « Chaînes disponibles ». Une flèche indique qu'elle se déplie.
 
+### Itération 15 : compteur du panneau Chaînes
+
+- **Compteur déplacé à côté du titre** du panneau, sous forme de pastille. Le message « disposition complète » est désormais seul.
+- **Message enrichi** : en plus de décocher une chaîne, il propose de passer à une disposition plus grande, avec un lien qui ouvre le panneau Disposition. Le lien est absent avec la disposition à 6 flux.
+
 ## 6. Vérification réalisée
 
 - **Tests unitaires** : 22 tests Vitest sur la géométrie des 6 dispositions et du mode grand (1 à 6 flux), et sur les règles de sélection.

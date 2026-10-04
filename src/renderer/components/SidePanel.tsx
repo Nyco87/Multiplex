@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { X } from 'lucide-react'
 import { useAppStore } from '../store/useAppStore'
-import { ChannelPicker } from './ChannelPicker'
+import { ChannelCount, ChannelPicker } from './ChannelPicker'
 import { HelpPanel } from './HelpPanel'
 import { InfoPanel } from './InfoPanel'
 import { LayoutPicker } from './LayoutPicker'
@@ -35,7 +35,10 @@ export function SidePanel() {
             transition={{ type: 'spring', stiffness: 380, damping: 34 }}
           >
             <header className="panel-header">
-              <h2>{TITLES[panel]}</h2>
+              <h2>
+                {TITLES[panel]}
+                {panel === 'channels' && <ChannelCount />}
+              </h2>
               <button className="icon-btn" onClick={closePanel} aria-label="Fermer le panneau" title="Fermer (Échap)">
                 <X size={18} />
               </button>

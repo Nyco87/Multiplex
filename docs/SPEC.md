@@ -143,12 +143,12 @@ Aucune action (changement de disposition, réordonnancement, passage en grand, a
 
 Le panneau Chaînes liste le catalogue groupé par zone, dans cet ordre : France, Europe, Canada, Afrique, Maroc, Monaco, Israël. Chaque ligne affiche le logo, le nom et une case.
 
-- **Compteur** : un compteur « *n* / *capacité* » est affiché en haut.
+- **Compteur** : une pastille « *n* / *capacité* » est affichée à côté du titre du panneau. Elle passe en rouge quand la disposition est pleine.
 - **Cocher une chaîne** l'ajoute **à la fin** de la sélection. La case affiche alors la position de la chaîne (1, 2…).
 - **Décocher une chaîne** la retire, et les suivantes remontent d'un rang.
 - **Disposition pleine** :
   - les chaînes non cochées sont **grisées et sans effet**, avec l'infobulle « Maximum *N* chaînes pour cette disposition » ;
-  - le compteur indique « Disposition complète : décochez une chaîne pour en choisir une autre » ;
+  - un message apparaît en haut de la liste : « Disposition complète. Décochez une chaîne pour en choisir une autre, ou passez à une disposition plus grande. » Le lien « passez à une disposition plus grande » ouvre le panneau Disposition. Il est absent avec la disposition à 6 flux, la plus grande ;
   - les lignes grisées restent atteignables au clavier.
 - **Logos** : ils sont affichés sur une pastille blanche, ou sombre pour les logos clairs.
 
