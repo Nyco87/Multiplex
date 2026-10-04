@@ -695,7 +695,7 @@ button {
   color: var(--accent-text);
 }
 
-/* Information */
+/* À propos */
 
 .info-app {
   display: flex;
@@ -736,6 +736,43 @@ button {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-muted);
+}
+
+.info-collapsible summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0 0;
+  padding: 0 8px 0 0;
+  border-radius: 8px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.info-collapsible summary::-webkit-details-marker {
+  display: none;
+}
+
+.info-collapsible summary h3 {
+  margin: 8px 4px;
+}
+
+.info-collapsible summary:hover {
+  background: var(--surface-2);
+}
+
+.info-collapsible summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.info-chevron {
+  color: var(--text-muted);
+  transition: transform 0.15s;
+}
+
+.info-collapsible[open] .info-chevron {
+  transform: rotate(90deg);
 }
 
 .info-channels,

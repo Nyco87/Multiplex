@@ -27,11 +27,11 @@ export function Rail() {
       <button
         className={`rail-btn rail-btn-bottom ${panel === 'info' ? 'is-active' : ''}`}
         onClick={() => togglePanel('info')}
-        title="Information (I)"
+        title="À propos (I)"
+        aria-label="À propos"
         aria-pressed={panel === 'info'}
       >
         <Info size={20} />
-        <span>Info</span>
       </button>
     </nav>
   )

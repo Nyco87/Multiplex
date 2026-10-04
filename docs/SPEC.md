@@ -28,7 +28,7 @@ Multiplex est une application de bureau Windows qui affiche simultanément de 2 
 - La barre de titre permet de déplacer la fenêtre. Les boutons natifs prennent les couleurs du thème.
 - **Plein écran** : il s'active avec `F11` ou le bouton plein écran.
   - **Affichage immersif** : la barre de titre et la barre de gauche sont masquées. La scène occupe tout l'écran, avec des marges égales, et la grille est centrée.
-  - **Barre flottante** : quand la souris bouge, une barre apparaît en haut à droite. Elle contient, dans l'ordre, **Chaînes**, **Disposition**, **Information**, un séparateur, **Thème** et **Quitter le plein écran**. Les boutons Chaînes, Disposition et Information ouvrent ou ferment leur panneau, et celui du panneau ouvert est en surbrillance. La barre s'efface après 2,5 s d'inactivité de la souris, même si elle est survolée.
+  - **Barre flottante** : quand la souris bouge, une barre apparaît en haut à droite. Elle contient, dans l'ordre, **Chaînes**, **Disposition**, **À propos**, un séparateur, **Thème** et **Quitter le plein écran**. Les boutons Chaînes, Disposition et À propos ouvrent ou ferment leur panneau, et celui du panneau ouvert est en surbrillance. La barre s'efface après 2,5 s d'inactivité de la souris, même si elle est survolée.
   - **Curseur** : après le même délai d'inactivité (2,5 s), le curseur de la souris est masqué. Il réapparaît dès que la souris bouge.
   - **Sortie** : `F11`, `Échap` (si aucun panneau ni grand flux n'est ouvert) ou le bouton.
   - **Panneaux** : ils restent accessibles par la barre flottante et au clavier (`C`, `D`).
@@ -50,7 +50,7 @@ Elle contient trois boutons, dans cet ordre :
 
 1. **Chaînes** : ouvre ou ferme le panneau Chaînes. Infobulle « Chaînes (C) ».
 2. **Disposition** : ouvre ou ferme le panneau Disposition. Infobulle « Disposition (D) ».
-3. **Info**, seul en **bas** de la barre : ouvre ou ferme le panneau Information. Infobulle « Information (I) ».
+3. **À propos**, seul en **bas** de la barre, icône sans libellé : ouvre ou ferme le panneau À propos. Infobulle « À propos (I) ».
 
 Le bouton du panneau ouvert est mis en surbrillance.
 
@@ -61,16 +61,15 @@ Le bouton du panneau ouvert est mis en surbrillance.
 - **Un seul panneau à la fois** : ouvrir un panneau remplace celui qui est ouvert.
 - **Focus clavier** : à l'ouverture, le focus va sur l'élément actif du panneau. À la fermeture, il est relâché.
 
-### 2.5 Panneau Information
+### 2.5 Panneau À propos
 
 Il présente, de haut en bas :
 
-- **L'application** : son icône, son nom et sa version (lue dans `package.json` au build), puis une courte description.
-- **Les chaînes** du catalogue, dans l'ordre du catalogue, avec leur logo. Chaque ligne est un lien vers le **site officiel** de la chaîne, ouvert dans le navigateur par défaut, jamais dans l'application.
+- **L'application** : son icône, son nom, sa version (lue dans `package.json` au build) et son copyright, puis une courte description.
 - **Les mentions légales** :
   - Multiplex ne stocke ni ne retransmet aucun contenu : chaque flux est lu depuis la source officielle de la chaîne ;
-  - les programmes, flux, noms et logos appartiennent aux chaînes, et Multiplex n'est affilié à aucune d'elles ;
-  - le copyright de l'application.
+  - les programmes, flux, noms et logos appartiennent aux chaînes, et Multiplex n'est affilié à aucune d'elles.
+- **Les chaînes disponibles**, dans une section **repliée** par défaut. Une flèche indique qu'elle se déplie, et pivote quand elle est ouverte. Les chaînes suivent l'ordre du catalogue, avec leur logo. Chaque ligne est un lien vers le **site officiel** de la chaîne, ouvert dans le navigateur par défaut, jamais dans l'application.
 - **Les logiciels tiers** : chaque bibliothèque embarquée, avec sa version et sa licence. Un clic déplie son site et le texte complet de sa licence (et de son fichier NOTICE, s'il existe). La liste est collectée dans `node_modules` à chaque build (`scripts/licenses.ts`). Les licences de Chromium sont fournies avec l'application, dans `LICENSES.chromium.html`.
 
 ## 3. Dispositions
@@ -161,7 +160,7 @@ Les raccourcis sont ignorés quand Ctrl, Alt ou Méta est enfoncé.
 |---|---|
 | `C` | Ouvre ou ferme le panneau Chaînes. |
 | `D` | Ouvre ou ferme le panneau Disposition. |
-| `I` | Ouvre ou ferme le panneau Information. |
+| `I` | Ouvre ou ferme le panneau À propos. |
 | `H` | Ouvre ou ferme le panneau « Raccourcis clavier » (aide). |
 | `1` … `6` | Affiche en grand le flux à cette position (ferme un éventuel panneau). Les touches sont lues par position physique, donc sans Maj sur un clavier AZERTY. |
 | `F11` | Active ou quitte le plein écran. |
@@ -236,7 +235,7 @@ Les rediffusions non officielles (adresses IP brutes, dépôts tiers) sont exclu
 | Maroc | Medi1TV Maghreb | HLS |
 | Monaco | Monaco Info | HLS |
 
-Chaque chaîne a aussi un champ `website` : son site officiel, affiché dans le panneau Information. Les URL exactes sont dans [`channels.json`](../src/renderer/data/channels.json). Les logos sont stockés en local dans `src/renderer/assets/logos/<id>.png`.
+Chaque chaîne a aussi un champ `website` : son site officiel, affiché dans le panneau À propos. Les URL exactes sont dans [`channels.json`](../src/renderer/data/channels.json). Les logos sont stockés en local dans `src/renderer/assets/logos/<id>.png`.
 
 ### 9.3 Chaînes écartées
 

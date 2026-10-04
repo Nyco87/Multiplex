@@ -6,7 +6,7 @@ import { HelpPanel } from './HelpPanel'
 import { InfoPanel } from './InfoPanel'
 import { LayoutPicker } from './LayoutPicker'
 
-const TITLES = { layout: 'Disposition', channels: 'Chaînes', help: 'Raccourcis clavier', info: 'Information' } as const
+const TITLES = { layout: 'Disposition', channels: 'Chaînes', help: 'Raccourcis clavier', info: 'À propos' } as const
 const CONTENT = { layout: LayoutPicker, channels: ChannelPicker, help: HelpPanel, info: InfoPanel }
 
 export function SidePanel() {

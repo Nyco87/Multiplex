@@ -67,8 +67,8 @@ export function FloatingActions({ theme }: Props) {
         <button
           className={`titlebar-btn ${panel === 'info' ? 'is-active' : ''}`}
           onClick={() => togglePanel('info')}
-          title="Information (I)"
-          aria-label="Information"
+          title="À propos (I)"
+          aria-label="À propos"
           aria-pressed={panel === 'info'}
         >
           <Info size={16} />

@@ -53,7 +53,7 @@ src/renderer/    interface React
 scripts/         vérification des flux, collecte des licences tierces
 ```
 
-Les licences des bibliothèques embarquées sont collectées dans `node_modules` à chaque build. Elles sont affichées dans le panneau Information de l'application.
+Les licences des bibliothèques embarquées sont collectées dans `node_modules` à chaque build. Elles sont affichées dans le panneau À propos de l'application.
 
 ## Publier une version
 

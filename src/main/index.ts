@@ -120,7 +120,7 @@ function createWindow(): void {
   // Plein écran : l'interface masque sa barre de titre et la barre de gauche.
   win.on('enter-full-screen', () => win.webContents.send('fullscreen', true))
   win.on('leave-full-screen', () => win.webContents.send('fullscreen', false))
-  // Liens externes (panneau Information) : ouverts dans le navigateur, jamais dans l'appli.
+  // Liens externes (panneau À propos) : ouverts dans le navigateur, jamais dans l'appli.
   win.webContents.setWindowOpenHandler(({ url }) => {
     if (/^https:\/\//.test(url)) shell.openExternal(url)
     return { action: 'deny' }

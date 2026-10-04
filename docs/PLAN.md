@@ -161,6 +161,14 @@ Ces écarts sont apparus pendant le développement de la première version.
 - **Multiplateforme écarté pour l'instant** : l'application reste Windows uniquement. Les adaptations relevées pour macOS (barre de titre, menu, raccourci plein écran, signature) et Linux restent à faire si le besoin revient.
 - **Licence de Multiplex** : aucune pour l'instant (tous droits réservés). Le choix entre MIT et Apache-2.0 reste ouvert.
 
+### Itération 14 : panneau À propos
+
+- **Panneau renommé « À propos »**, infobulle et aide comprises.
+- **Bouton de la barre latérale sans libellé** : l'icône seule.
+- **Copyright déplacé sous la version** de l'application.
+- **Mentions légales placées avant les chaînes.**
+- **Section des chaînes repliée par défaut** et renommée « Chaînes disponibles ». Une flèche indique qu'elle se déplie.
+
 ## 6. Vérification réalisée
 
 - **Tests unitaires** : 22 tests Vitest sur la géométrie des 6 dispositions et du mode grand (1 à 6 flux), et sur les règles de sélection.

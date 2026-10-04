@@ -1,4 +1,4 @@
-import { ExternalLink } from 'lucide-react'
+import { ChevronRight, ExternalLink } from 'lucide-react'
 import licenses from 'virtual:licenses'
 import appIcon from '../../../build/icon.svg'
 import { CHANNELS } from '../data/channels'
@@ -20,6 +20,7 @@ export function InfoPanel() {
         <div>
           <h3>Multiplex</h3>
           <p>Version {__APP_VERSION__}</p>
+          <p>© 2026 Nicolas Morellet. Tous droits réservés.</p>
         </div>
       </header>
 
@@ -29,7 +30,22 @@ export function InfoPanel() {
       </p>
 
       <section className="info-section">
-        <h3>Chaînes</h3>
+        <h3>Mentions légales</h3>
+        <p className="info-text">
+          Multiplex ne stocke ni ne retransmet aucun contenu : chaque flux est lu directement depuis la source officielle
+          publiée par la chaîne (son propre serveur, ou son compte YouTube ou Dailymotion).
+        </p>
+        <p className="info-text">
+          Les programmes, flux, noms et logos appartiennent à leurs chaînes respectives, qui en détiennent tous les droits.
+          Multiplex n’est affilié à aucune de ces chaînes et n’est approuvé par aucune d’elles.
+        </p>
+      </section>
+
+      <details className="info-section info-collapsible">
+        <summary>
+          <h3>Chaînes disponibles</h3>
+          <ChevronRight size={14} className="info-chevron" />
+        </summary>
         <ul className="info-channels">
           {CHANNELS.map((channel) => (
             <li key={channel.id}>
@@ -43,20 +59,7 @@ export function InfoPanel() {
             </li>
           ))}
         </ul>
-      </section>
-
-      <section className="info-section">
-        <h3>Mentions légales</h3>
-        <p className="info-text">
-          Multiplex ne stocke ni ne retransmet aucun contenu : chaque flux est lu directement depuis la source officielle
-          publiée par la chaîne (son propre serveur, ou son compte YouTube ou Dailymotion).
-        </p>
-        <p className="info-text">
-          Les programmes, flux, noms et logos appartiennent à leurs chaînes respectives, qui en détiennent tous les droits.
-          Multiplex n’est affilié à aucune de ces chaînes et n’est approuvé par aucune d’elles.
-        </p>
-        <p className="info-text">© 2026 Nicolas Morellet. Tous droits réservés.</p>
-      </section>
+      </details>
 
       <section className="info-section">
         <h3>Logiciels tiers</h3>

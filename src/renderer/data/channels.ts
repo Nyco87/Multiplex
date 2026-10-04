@@ -9,7 +9,7 @@ export interface Channel {
   id: string
   name: string
   country: string
-  /** Site officiel de la chaîne (panneau Information). */
+  /** Site officiel de la chaîne (panneau À propos). */
   website: string
   logo: string
   /** Logo clair sur fond transparent : à afficher sur une pastille sombre. */
