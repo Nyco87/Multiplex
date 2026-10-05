@@ -1,7 +1,4 @@
-# Multiplex
-
-[![Build](https://github.com/Nyco87/Multiplex/actions/workflows/release.yml/badge.svg?event=push)](https://github.com/Nyco87/Multiplex/actions/workflows/release.yml)
-[![Licence : MIT](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
+# Multiplex [![Version](https://img.shields.io/github/package-json/v/Nyco87/Multiplex?label=version)](https://github.com/Nyco87/Multiplex/releases) [![Build](https://github.com/Nyco87/Multiplex/actions/workflows/release.yml/badge.svg?event=push)](https://github.com/Nyco87/Multiplex/actions/workflows/release.yml) [![Licence : MIT](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
 
 <p align="center">
   <img src="docs/images/splash.png" alt="Écran d'ouverture de Multiplex" width="720">
@@ -24,17 +21,12 @@ Multiplex affiche simultanément de 2 à 6 directs (franceinfo, BFMTV, France 24
 
 ## Aperçu
 
-**Mosaïque de 4 flux (2 × 2)**
-
-![Mosaïque de 4 flux : franceinfo, BFMTV, France 24 et TV5Monde Info](docs/images/mosaique-2x2.jpg)
-
-**Panneau Disposition**
-
-![Panneau Disposition ouvert, avec les 6 dispositions proposées](docs/images/panneau-disposition.jpg)
-
-**Flux en grand, dans la disposition à 6 flux (3 × 2)** : les autres flux passent en miniatures à gauche.
-
-![France 24 affiché en grand, les 5 autres flux en miniatures](docs/images/flux-en-grand-3x2.jpg)
+<p align="center">
+  <img src="docs/images/mosaique-2x2.jpg" alt="Mosaïque de 4 flux (2 × 2)" width="400">
+  <img src="docs/images/panneau-disposition.jpg" alt="Panneau Disposition ouvert" width="400">
+  <br>
+  <img src="docs/images/flux-en-grand-3x2.jpg" alt="Un flux affiché en grand, dans la disposition à 6 flux (3 × 2)" width="400">
+</p>
 
 Le comportement détaillé est décrit dans la [spécification](docs/SPEC.md), et l'historique des décisions dans le [plan et journal](docs/PLAN.md).
 
