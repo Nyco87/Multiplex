@@ -65,7 +65,7 @@ Le bouton du panneau ouvert est mis en surbrillance.
 
 Il présente, de haut en bas :
 
-- **L'application** : son icône, son nom, sa version (lue dans `package.json` au build) et son copyright, puis une courte description.
+- **L'application** : son icône, son nom, sa version (lue dans `package.json` au build), son copyright et sa licence (MIT), puis une courte description.
 - **Les mentions légales** :
   - Multiplex ne stocke ni ne retransmet aucun contenu : chaque flux est lu depuis la source officielle de la chaîne ;
   - les programmes, flux, noms et logos appartiennent aux chaînes, et Multiplex n'est affilié à aucune d'elles.

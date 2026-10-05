@@ -20,7 +20,7 @@ export function InfoPanel() {
         <div>
           <h3>Multiplex</h3>
           <p>Version {__APP_VERSION__}</p>
-          <p>© 2026 Nicolas Morellet. Tous droits réservés.</p>
+          <p>© 2026 Nicolas Morellet · Licence MIT</p>
         </div>
       </header>
 

@@ -159,7 +159,7 @@ Ces écarts sont apparus pendant le développement de la première version.
 - **README** ajouté.
 - **Publication automatisée** : le workflow GitHub Actions `release.yml` se déclenche sur un tag `v*`. Il vérifie que le tag correspond à la version de `package.json`, lance les tests, construit l'installeur et le dépose dans une **release brouillon**. Lancé à la main, il construit seulement l'installeur, en artefact.
 - **Multiplateforme écarté pour l'instant** : l'application reste Windows uniquement. Les adaptations relevées pour macOS (barre de titre, menu, raccourci plein écran, signature) et Linux restent à faire si le besoin revient.
-- **Licence de Multiplex** : aucune pour l'instant (tous droits réservés). Le choix entre MIT et Apache-2.0 reste ouvert.
+- **Licence de Multiplex** : aucune pour l'instant (tous droits réservés). Le choix entre MIT et Apache-2.0 reste ouvert. Voir l'itération 16.
 
 ### Itération 14 : panneau À propos
 
@@ -173,6 +173,11 @@ Ces écarts sont apparus pendant le développement de la première version.
 
 - **Compteur déplacé à côté du titre** du panneau, sous forme de pastille. Le message « disposition complète » est désormais seul.
 - **Message enrichi** : en plus de décocher une chaîne, il propose de passer à une disposition plus grande, avec un lien qui ouvre le panneau Disposition. Le lien est absent avec la disposition à 6 flux.
+
+### Itération 16 : licence MIT
+
+- **Multiplex passe sous licence MIT** : fichier `LICENSE` à la racine, champ `license` de `package.json`, README et panneau À propos (« © 2026 Nicolas Morellet · Licence MIT »).
+- **Périmètre** : la licence couvre le code. Les noms et logos des chaînes restent des marques de leurs détenteurs, ce que précisent le README et les mentions légales du panneau À propos.
 
 ## 6. Vérification réalisée
 

@@ -5,6 +5,7 @@
   "description": "Mur d'images des chaînes d'info francophones",
   "main": "./out/main/index.js",
   "author": "Nicolas Morellet",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "electron-vite dev",

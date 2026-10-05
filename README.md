@@ -1,5 +1,12 @@
 # Multiplex
 
+[![Build](https://github.com/Nyco87/Multiplex/actions/workflows/release.yml/badge.svg?event=push)](https://github.com/Nyco87/Multiplex/actions/workflows/release.yml)
+[![Licence : MIT](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
+
+<p align="center">
+  <img src="docs/images/splash.png" alt="Écran d'ouverture de Multiplex" width="720">
+</p>
+
 Mur d'images des chaînes d'information francophones, pour Windows.
 
 Multiplex affiche simultanément de 2 à 6 directs (franceinfo, BFMTV, France 24, TV5Monde Info, Euronews, ICI RDI, i24NEWS…) dans une mosaïque en 16/9. Les flux démarrent seuls et restent muets. Un clic sur l'un d'eux l'affiche en grand, avec le son.
@@ -14,6 +21,20 @@ Multiplex affiche simultanément de 2 à 6 directs (franceinfo, BFMTV, France 24
 - **Thèmes** clair et sombre.
 - **Mémorisation** de la disposition, des chaînes et du thème.
 - **Raccourcis clavier** : `H` pour les afficher.
+
+## Aperçu
+
+**Mosaïque de 4 flux (2 × 2)**
+
+![Mosaïque de 4 flux : franceinfo, BFMTV, France 24 et TV5Monde Info](docs/images/mosaique-2x2.jpg)
+
+**Panneau Disposition**
+
+![Panneau Disposition ouvert, avec les 6 dispositions proposées](docs/images/panneau-disposition.jpg)
+
+**Flux en grand, dans la disposition à 6 flux (3 × 2)** : les autres flux passent en miniatures à gauche.
+
+![France 24 affiché en grand, les 5 autres flux en miniatures](docs/images/flux-en-grand-3x2.jpg)
 
 Le comportement détaillé est décrit dans la [spécification](docs/SPEC.md), et l'historique des décisions dans le [plan et journal](docs/PLAN.md).
 
@@ -77,4 +98,6 @@ Multiplex ne stocke ni ne retransmet aucun contenu : chaque flux est lu directem
 
 ## Licence
 
-© 2026 Nicolas Morellet. Tous droits réservés. Aucune licence n'est accordée pour le moment.
+Le code de Multiplex est distribué sous [licence MIT](LICENSE). © 2026 Nicolas Morellet.
+
+Cette licence couvre uniquement le code. Les noms et logos des chaînes, dans `src/renderer/assets/logos/`, sont des marques de leurs détenteurs respectifs, et n'en relèvent pas.
