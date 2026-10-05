@@ -1,4 +1,4 @@
-# Multiplex [![Version](https://img.shields.io/github/package-json/v/Nyco87/Multiplex?label=version)](https://github.com/Nyco87/Multiplex/releases) [![Build](https://github.com/Nyco87/Multiplex/actions/workflows/release.yml/badge.svg?event=push)](https://github.com/Nyco87/Multiplex/actions/workflows/release.yml) [![Licence : MIT](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
+# Multiplex [![Version](https://img.shields.io/github/package-json/v/Nyco87/Multiplex?label=version)](https://github.com/Nyco87/Multiplex/releases) [![Build](https://github.com/Nyco87/Multiplex/actions/workflows/release.yml/badge.svg?event=push)](https://github.com/Nyco87/Multiplex/actions/workflows/release.yml) [![Licence : MIT](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE) [![Built with Claude Code](https://img.shields.io/badge/built%20with-Claude%20Code-D97757?logo=claude&logoColor=white)](https://claude.com/claude-code)
 
 <p align="center">
   <img src="docs/images/splash.png" alt="Écran d'ouverture de Multiplex" width="720">
